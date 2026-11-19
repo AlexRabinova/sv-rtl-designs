@@ -1,0 +1,2 @@
+sv work rtl/log2_floor.sv
+sv work tb/log2_floor_tb.sv

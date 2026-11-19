@@ -1,0 +1,3 @@
+sv work rtl/fsm_mealy.sv
+sv work rtl/fsm_moore.sv
+sv work tb/tb_fsm.sv

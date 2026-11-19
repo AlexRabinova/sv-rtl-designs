@@ -1,0 +1,2 @@
+sv work rtl/fir_filter_folded.sv
+sv work tb/tb_fir_filter_folded.sv

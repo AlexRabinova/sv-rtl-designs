@@ -1,0 +1,2 @@
+sv work rtl/poly_system.sv
+sv work tb/tb_poly_system.sv

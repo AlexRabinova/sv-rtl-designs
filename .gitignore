@@ -1,0 +1,13 @@
+# Ignore log, journal, database, and compiled simulation artifacts
+*.log
+*.jou
+*.pb
+*.wdb
+xsim.dir/
+work/
+
+# Keep .vcd waveform files (even inside sim_build)
+!*.vcd
+*.wlf
+transcript
+modelsim.ini

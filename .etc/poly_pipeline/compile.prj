@@ -1,0 +1,2 @@
+sv work rtl/poly_pipeline.sv
+sv work tb/tb_poly_pipeline.sv

@@ -1,0 +1,2 @@
+sv work rtl/divide_by_5.sv
+sv work tb/tb_divide_by_5.sv

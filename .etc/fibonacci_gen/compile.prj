@@ -1,0 +1,2 @@
+sv work rtl/fibonacci_gen.sv
+sv work tb/tb_fibonacci_gen.sv

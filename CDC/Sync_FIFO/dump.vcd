@@ -1,0 +1,1090 @@
+$date
+	Thu Aug 27 15:23:15 2026
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module tb_axis_fifo_fwft $end
+$var parameter 32 ! DATA_WIDTH $end
+$var parameter 32 " DEPTH $end
+$var parameter 32 # CLK_PERIOD $end
+$var reg 1 $ clk $end
+$var reg 1 % rst_n $end
+$var reg 1 & s_axis_tvalid $end
+$var reg 1 ' s_axis_tready $end
+$var reg 8 ( s_axis_tdata [7:0] $end
+$var reg 1 ) m_axis_tvalid $end
+$var reg 1 * m_axis_tready $end
+$var reg 8 + m_axis_tdata [7:0] $end
+$scope module dut $end
+$var parameter 32 , DATA_WIDTH $end
+$var parameter 32 - DEPTH $end
+$var wire 1 . clk $end
+$var wire 1 / rst_n $end
+$var wire 1 0 s_axis_tvalid $end
+$var reg 1 1 s_axis_tready $end
+$var wire 1 2 s_axis_tdata [7] $end
+$var wire 1 3 s_axis_tdata [6] $end
+$var wire 1 4 s_axis_tdata [5] $end
+$var wire 1 5 s_axis_tdata [4] $end
+$var wire 1 6 s_axis_tdata [3] $end
+$var wire 1 7 s_axis_tdata [2] $end
+$var wire 1 8 s_axis_tdata [1] $end
+$var wire 1 9 s_axis_tdata [0] $end
+$var reg 1 : m_axis_tvalid $end
+$var wire 1 ; m_axis_tready $end
+$var reg 8 < m_axis_tdata [7:0] $end
+$var reg 1 = fifo_wr_valid $end
+$var reg 1 > fifo_wr_ready $end
+$var reg 8 ? fifo_wr_data [7:0] $end
+$var reg 1 @ fifo_rd_valid $end
+$var reg 1 A fifo_rd_ready $end
+$var reg 8 B fifo_rd_data [7:0] $end
+$var reg 1 C fifo_empty $end
+$var reg 1 D fifo_full $end
+$scope module u_ingress_skid $end
+$var parameter 32 E DATA_WIDTH $end
+$var wire 1 . clk $end
+$var wire 1 / rst_n $end
+$var wire 1 0 s_axis_tvalid $end
+$var reg 1 F s_axis_tready $end
+$var wire 1 2 s_axis_tdata [7] $end
+$var wire 1 3 s_axis_tdata [6] $end
+$var wire 1 4 s_axis_tdata [5] $end
+$var wire 1 5 s_axis_tdata [4] $end
+$var wire 1 6 s_axis_tdata [3] $end
+$var wire 1 7 s_axis_tdata [2] $end
+$var wire 1 8 s_axis_tdata [1] $end
+$var wire 1 9 s_axis_tdata [0] $end
+$var reg 1 G to_fifo_tvalid $end
+$var wire 1 H to_fifo_tready $end
+$var reg 8 I to_fifo_tdata [7:0] $end
+$var reg 8 J skid_reg [7:0] $end
+$var reg 1 K skid_valid $end
+$var wire 1 L s_axis_fire $end
+$upscope $end
+$scope module u_core_fifo $end
+$var parameter 32 M DATA_WIDTH $end
+$var parameter 32 N DEPTH $end
+$var parameter 32 O ADDR_WIDTH $end
+$var wire 1 . clk $end
+$var wire 1 / rst_n $end
+$var wire 1 P wr_en $end
+$var wire 1 Q din [7] $end
+$var wire 1 R din [6] $end
+$var wire 1 S din [5] $end
+$var wire 1 T din [4] $end
+$var wire 1 U din [3] $end
+$var wire 1 V din [2] $end
+$var wire 1 W din [1] $end
+$var wire 1 X din [0] $end
+$var reg 1 Y full $end
+$var wire 1 Z rd_en $end
+$var reg 8 [ dout [7:0] $end
+$var reg 1 \ valid_out $end
+$var reg 1 ] empty $end
+$var reg 3 ^ wr_ptr [2:0] $end
+$var reg 3 _ rd_ptr [2:0] $end
+$upscope $end
+$scope module u_egress_skid $end
+$var parameter 32 ` DATA_WIDTH $end
+$var wire 1 . clk $end
+$var wire 1 / rst_n $end
+$var wire 1 a from_fifo_tvalid $end
+$var reg 1 b from_fifo_tready $end
+$var wire 1 c from_fifo_tdata [7] $end
+$var wire 1 d from_fifo_tdata [6] $end
+$var wire 1 e from_fifo_tdata [5] $end
+$var wire 1 f from_fifo_tdata [4] $end
+$var wire 1 g from_fifo_tdata [3] $end
+$var wire 1 h from_fifo_tdata [2] $end
+$var wire 1 i from_fifo_tdata [1] $end
+$var wire 1 j from_fifo_tdata [0] $end
+$var reg 1 k m_axis_tvalid $end
+$var wire 1 ; m_axis_tready $end
+$var reg 8 l m_axis_tdata [7:0] $end
+$var reg 8 m primary_reg [7:0] $end
+$var reg 8 n skid_reg [7:0] $end
+$var reg 1 o primary_valid $end
+$var reg 1 p skid_valid $end
+$var wire 1 q in_fire $end
+$var wire 1 r out_fire $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+0%
+0&
+1'
+b0 (
+0)
+0*
+bx +
+11
+0:
+bx <
+0=
+1>
+b0 ?
+0@
+1A
+bx B
+1C
+0D
+1F
+0G
+b0 I
+b0 J
+0K
+0Y
+bx [
+0\
+1]
+b0 ^
+b0 _
+1b
+0k
+bx l
+b0 m
+b0 n
+0o
+0p
+b1000 !
+b100 "
+b1010 #
+b1000 ,
+b100 -
+b1000 E
+b1000 M
+b100 N
+b10 O
+b1000 `
+0L
+0q
+0r
+0.
+0/
+00
+09
+08
+07
+06
+05
+04
+03
+02
+0;
+0Z
+0P
+1H
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0a
+xj
+xi
+xh
+xg
+xf
+xe
+xd
+xc
+$end
+#5000
+1$
+1.
+#10000
+0$
+0.
+#15000
+1$
+1.
+#20000
+1%
+0$
+1/
+0.
+#25000
+1$
+1.
+#30000
+0$
+0.
+#35000
+1$
+1.
+1&
+b10100001 (
+10
+19
+14
+12
+b10100001 I
+1G
+1L
+1=
+b10100001 ?
+1P
+1X
+1S
+1Q
+#40000
+0$
+0.
+#45000
+1$
+1.
+b1 ^
+0&
+0]
+00
+0G
+0C
+0L
+0=
+1Z
+0P
+#50000
+0$
+0.
+#55000
+1$
+1.
+b10100001 [
+1\
+b1 _
+1*
+1]
+1@
+b10100001 B
+1;
+1C
+1a
+1j
+0i
+0h
+0g
+0f
+1e
+0d
+1c
+b10100001 l
+1k
+0Z
+1q
+1:
+b10100001 <
+1r
+b10100001 +
+1)
+#60000
+0$
+0.
+#65000
+1$
+1.
+0\
+b10100001 m
+1o
+0*
+0@
+0;
+0a
+0r
+0q
+#70000
+0$
+0.
+#75000
+1$
+1.
+#80000
+0$
+0.
+#85000
+1$
+1.
+1&
+b10110001 (
+10
+15
+b10110001 I
+1G
+1L
+1=
+b10110001 ?
+1P
+1T
+#90000
+0$
+0.
+#95000
+1$
+1.
+b10 ^
+0&
+b0 (
+0]
+00
+09
+05
+04
+02
+b0 I
+0G
+0C
+0L
+0=
+b0 ?
+1Z
+0P
+0X
+0T
+0S
+0Q
+#100000
+0$
+0.
+#105000
+1$
+1.
+b10110001 [
+1\
+b10 _
+1&
+b10110010 (
+1]
+1@
+b10110001 B
+10
+18
+15
+14
+12
+b10110010 I
+1G
+1C
+1a
+1f
+1L
+1=
+b10110010 ?
+0Z
+1q
+1P
+1W
+1T
+1S
+1Q
+#110000
+0$
+0.
+#115000
+1$
+1.
+0\
+b11 ^
+b10110001 n
+1p
+0&
+b0 (
+0b
+b10110001 l
+0]
+0@
+00
+08
+05
+04
+02
+b0 I
+0G
+0C
+b10110001 <
+0A
+0q
+0a
+0L
+b10110001 +
+0=
+b0 ?
+0P
+0W
+0T
+0S
+0Q
+#120000
+0$
+0.
+#125000
+1$
+1.
+1&
+b10110011 (
+10
+19
+18
+15
+14
+12
+b10110011 I
+1G
+1L
+1=
+b10110011 ?
+1P
+1X
+1W
+1T
+1S
+1Q
+#130000
+0$
+0.
+#135000
+1$
+1.
+b100 ^
+0&
+b0 (
+00
+09
+08
+05
+04
+02
+b0 I
+0G
+0L
+0=
+b0 ?
+0P
+0X
+0W
+0T
+0S
+0Q
+#140000
+0$
+0.
+#145000
+1$
+1.
+1&
+b10110100 (
+10
+17
+15
+14
+12
+b10110100 I
+1G
+1L
+1=
+b10110100 ?
+1P
+1V
+1T
+1S
+1Q
+#150000
+0$
+0.
+#155000
+1$
+1.
+b101 ^
+0&
+b0 (
+00
+07
+05
+04
+02
+b0 I
+0G
+0L
+0=
+b0 ?
+0P
+0V
+0T
+0S
+0Q
+#160000
+0$
+0.
+#165000
+1$
+1.
+1&
+b10110101 (
+10
+19
+17
+15
+14
+12
+b10110101 I
+1G
+1L
+1=
+b10110101 ?
+1P
+1X
+1V
+1T
+1S
+1Q
+#170000
+0$
+0.
+#175000
+1$
+1.
+b110 ^
+0&
+b0 (
+1Y
+00
+09
+07
+05
+04
+02
+b0 I
+0G
+1D
+0L
+0>
+0=
+b0 ?
+0P
+0H
+0X
+0V
+0T
+0S
+0Q
+#180000
+0$
+0.
+#185000
+1$
+1.
+1&
+b10110110 (
+10
+18
+17
+15
+14
+12
+b10110110 I
+1G
+1L
+1=
+b10110110 ?
+1W
+1V
+1T
+1S
+1Q
+#190000
+0$
+0.
+#195000
+1$
+1.
+b10110110 J
+1K
+0F
+0&
+b0 (
+01
+0L
+00
+08
+07
+05
+04
+02
+0'
+#200000
+0$
+0.
+#205000
+1$
+1.
+1*
+1;
+1r
+#210000
+0$
+0.
+#215000
+1$
+1.
+b10110001 m
+0p
+1b
+1A
+1Z
+#220000
+0$
+0.
+#225000
+1$
+1.
+b10110010 [
+1\
+b11 _
+0o
+0k
+0Y
+1@
+b10110010 B
+0D
+0:
+0r
+1a
+0j
+1i
+b10110010 l
+1k
+0)
+1>
+1q
+1:
+b10110010 <
+1r
+1P
+1H
+b10110010 +
+1)
+#230000
+0$
+0.
+#235000
+1$
+1.
+0K
+1F
+b10110011 [
+b100 _
+b111 ^
+b10110010 m
+1o
+b10110011 B
+11
+0G
+b0 I
+b0 ?
+0=
+1'
+1j
+0W
+0V
+0T
+0S
+0Q
+0P
+#240000
+0$
+0.
+#245000
+1$
+1.
+b10110100 [
+b101 _
+b10110011 m
+b10110011 l
+b10110100 B
+b10110011 <
+0j
+0i
+1h
+b10110011 +
+#250000
+0$
+0.
+#255000
+1$
+1.
+b10110101 [
+b110 _
+b10110100 m
+b10110100 l
+b10110101 B
+b10110100 <
+1j
+b10110100 +
+#260000
+0$
+0.
+#265000
+1$
+1.
+b10110110 [
+b111 _
+b10110101 m
+b10110101 l
+1]
+b10110110 B
+1C
+b10110101 <
+0j
+1i
+b10110101 +
+0Z
+#270000
+0$
+0.
+#275000
+1$
+1.
+0\
+b10110110 m
+0*
+b10110110 l
+0@
+0;
+b10110110 <
+0a
+0r
+b10110110 +
+0q
+#280000
+0$
+0.
+#285000
+1$
+1.
+#290000
+0$
+0.
+#295000
+1$
+1.
+1*
+1&
+b11000001 (
+1;
+10
+19
+13
+12
+b11000001 I
+1G
+1r
+1L
+1=
+b11000001 ?
+1P
+1X
+1R
+1Q
+#300000
+0$
+0.
+#305000
+1$
+1.
+b0 ^
+0o
+b11000010 (
+0k
+0]
+09
+18
+b11000010 I
+0C
+0:
+0r
+0)
+b11000010 ?
+1Z
+0X
+1W
+#310000
+0$
+0.
+#315000
+1$
+1.
+b11000001 [
+1\
+b0 _
+b1 ^
+b11000011 (
+1@
+b11000001 B
+19
+b11000011 I
+1a
+1j
+0i
+0h
+0f
+0e
+1d
+b11000001 l
+1k
+b11000011 ?
+1q
+1:
+b11000001 <
+1r
+1X
+b11000001 +
+1)
+#320000
+0$
+0.
+#325000
+1$
+1.
+b11000010 [
+b1 _
+b10 ^
+b11000001 m
+1o
+b11000100 (
+b11000010 B
+09
+08
+17
+b11000100 I
+0j
+1i
+b11000100 ?
+0X
+0W
+1V
+#330000
+0$
+0.
+#335000
+1$
+1.
+b11000011 [
+b10 _
+b11 ^
+b11000010 m
+b11000101 (
+b11000010 l
+b11000011 B
+19
+b11000101 I
+b11000010 <
+1j
+b11000010 +
+b11000101 ?
+1X
+#340000
+0$
+0.
+#345000
+1$
+1.
+b11000100 [
+b11 _
+b100 ^
+b11000011 m
+b11000110 (
+b11000011 l
+b11000100 B
+09
+18
+b11000110 I
+b11000011 <
+0j
+0i
+1h
+b11000011 +
+b11000110 ?
+0X
+1W
+#350000
+0$
+0.
+#355000
+1$
+1.
+b11000101 [
+b100 _
+b101 ^
+b11000100 m
+b11000111 (
+b11000100 l
+b11000101 B
+19
+b11000111 I
+b11000100 <
+1j
+b11000100 +
+b11000111 ?
+1X
+#360000
+0$
+0.
+#365000
+1$
+1.
+b11000110 [
+b101 _
+b110 ^
+b11000101 m
+b11001000 (
+b11000101 l
+b11000110 B
+09
+08
+07
+16
+b11001000 I
+b11000101 <
+0j
+1i
+b11000101 +
+b11001000 ?
+0X
+0W
+0V
+1U
+#370000
+0$
+0.
+#375000
+1$
+1.
+b11000111 [
+b110 _
+b111 ^
+b11000110 m
+b11001001 (
+b11000110 l
+b11000111 B
+19
+b11001001 I
+b11000110 <
+1j
+b11000110 +
+b11001001 ?
+1X
+#380000
+0$
+0.
+#385000
+1$
+1.
+b11001000 [
+b111 _
+b0 ^
+b11000111 m
+b11001010 (
+b11000111 l
+b11001000 B
+09
+18
+b11001010 I
+b11000111 <
+0j
+0i
+0h
+1g
+b11000111 +
+b11001010 ?
+0X
+1W
+#390000
+0$
+0.
+#395000
+1$
+1.
+b11001001 [
+b0 _
+b1 ^
+b11001000 m
+0&
+b11001000 l
+b11001001 B
+00
+0G
+b11001000 <
+1j
+0L
+b11001000 +
+0=
+0P
+#400000
+0$
+0.
+#405000
+1$
+1.
+b11001010 [
+b1 _
+b11001001 m
+0*
+b11001001 l
+1]
+b11001010 B
+0;
+1C
+b11001001 <
+0j
+1i
+0r
+b11001001 +
+0Z
+#410000
+0$
+0.
+#415000
+1$
+1.
+0\
+b11001010 n
+1p
+0b
+b11001010 l
+0@
+b11001010 <
+0A
+0q
+0a
+b11001010 +
+#420000
+0$
+0.
+#425000
+1$
+1.
+#430000
+0$
+0.
+#435000
+1$
+1.
+#440000
+0$
+0.
+#445000
+1$
+1.
+#450000
+0$
+0.

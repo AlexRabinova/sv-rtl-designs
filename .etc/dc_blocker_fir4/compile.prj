@@ -1,0 +1,2 @@
+sv work rtl/dc_blocker_fir4.sv
+sv work tb/tb_dc_blocker_fir4.sv

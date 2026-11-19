@@ -1,0 +1,2 @@
+sv work rtl/freq_doubler_xor.sv
+sv work tb/tb_freq_doubler_xor.sv

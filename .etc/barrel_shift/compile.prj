@@ -1,0 +1,2 @@
+sv work rtl/module.sv
+sv work tb/tb_module.sv

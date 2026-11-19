@@ -1,0 +1,2 @@
+sv work rtl/max_selector.sv
+sv work tb/tb_max_selector.sv
