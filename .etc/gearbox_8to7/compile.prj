@@ -1,0 +1,2 @@
+sv work rtl/gearbox_8to7.sv
+sv work tb/tb_gearbox_8to7.sv
